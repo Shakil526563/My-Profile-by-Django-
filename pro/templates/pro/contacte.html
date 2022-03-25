@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Details</title>
+    <style>
+      .Navber{
+          background:rgb(0, 1, 3);
+          border-radius: 30px;
+      }
+      .Navber ul{
+          overflow: auto;
+      }
+      .Navber li{
+          float:left;
+          list-style-type:none;
+          margin:16px 6px;
+      }
+      .Navber li a{
+          padding: 3px 3px;
+          text-decoration: none;
+          color: aliceblue;
+      }
+      .search{
+          float:right;
+          color: aliceblue;
+          padding: 0px 70px;
+      }
+      .Navber input{
+          border: 4px solid black;
+          border-radius: 4px;
+          padding: 13px;
+      }
+      .Navber li a:hover{
+          background-color: blue;
+      }
+      </style>
+</head>
+<body style="background-color: aquamarine;">
+  <header>
+    <nav class="Navber">
+        <ul>
+            <li><a href="http://127.0.0.1:8000/">Home</a></li>
+            <li><a href="http://127.0.0.1:8000/contactme/">Contact</a> </li>
+            <li><a href="http://127.0.0.1:8000/index/">About Me</a> </li>
+            <li><a href="http://127.0.0.1:8000/showdata/">Display Data</a> </li>
+            <div class="search">
+                <input type="text" name="search" id="search " placeholder="search this website" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+
+
+            </div>
+
+        </ul>
+
+    </nav>
+</header>
+  <p style="text-align:right;">
+<form action="" method="POST">
+    {% csrf_token %}
+
+  <table>
+    {{form}}
+  </table>
+  <p style="text-align:start;">
+  <input type="submit" value="Submit">
+</p>
+</form>
+</p>
+</body>
+</html>
